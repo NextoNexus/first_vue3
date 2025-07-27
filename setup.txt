@@ -1,0 +1,18 @@
+let name='zouhaonan'
+let age=18
+let tel=123456
+let addr = 'beijing'
+function showtel() {
+    alert(tel)
+}
+function editname(){
+    var newname=prompt('input your name')
+    name = newname
+}
+function editage(){
+    age+=1
+}
+return {name:name,age:age,tel:tel,
+    showtel,editname,editage
+}
+// return ()=>'haha'
