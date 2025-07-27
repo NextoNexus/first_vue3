@@ -98,7 +98,7 @@
                                     <label>类别：</label>
                                     <!-- <el-input v-model="table.projectInfo.type" size="small"
                                         placeholder="请输入类别"></el-input> -->
-                                    <el-select v-model="table.projectInfo.unitType" size="medium" placeholder="请选择类别">
+<el-select v-model="table.projectInfo.unitType" size="default" placeholder="请选择类别">
                                         <el-option v-for="item in projectTypes" :key="item.enumKey"
                                             :label="item.enumName" :value="item.enumKey">
                                         </el-option>
@@ -106,28 +106,28 @@
                                 </div>
                                 <div class="input-item">
                                     <label>牵头部门（需求科室）：</label>
-                                    <el-input v-model="table.projectInfo.departName" size="medium"
+                                    <el-input v-model="table.projectInfo.departName" size="default"
                                         placeholder="请输入牵头部门"></el-input>
                                 </div>
                                 <div class="input-item">
                                     <label>项目负责人：</label>
-                                    <el-input v-model="table.projectInfo.commander" size="medium"
+                                    <el-input v-model="table.projectInfo.commander" size="default"
                                         placeholder="请输入负责人"></el-input>
                                 </div>
                                 <div class="input-item">
                                     <label>项目名称：</label>
-                                    <el-input v-model="table.projectInfo.projectName" size="medium"
+                                    <el-input v-model="table.projectInfo.projectName" size="default"
                                         placeholder="请输入项目名称"></el-input>
                                 </div>
                                 <div class="input-item">
                                     <label>项目初步预算金额（万元）：</label>
-                                    <el-input v-model="table.projectInfo.budgetMoney" size="medium" placeholder="请输入预算"
+                                    <el-input v-model="table.projectInfo.budgetMoney" size="default" placeholder="请输入预算"
                                         type="number"></el-input>
                                 </div>
                                 <div class="input-item">
                                     <label>项目启动时间：</label>
                                     <el-date-picker v-model="table.projectInfo.startTime" type="date"
-                                        placeholder="选择开始时间" value-format="YYYY-MM-DD" size="medium"></el-date-picker>
+                                        placeholder="选择开始时间" value-format="YYYY-MM-DD" size="default"></el-date-picker>
                                 </div>
                             </div>
                         </div>
@@ -475,6 +475,7 @@
 
 // import { addProjectCoordinate, deleteProjectCoordinate, getChangeList, getCoordinatorNameMenu, getDepartmentNameMenu, getProgressNext, getProjectCoordinate, getProjectDetail, getProjectId, getProjectProgressList, getProjectRecordList, getUsersByDepartID, insertOrUpdate, InsertRecord, projectTransmit, updateProjectStatus, updateRecord } from '@/api/website';
 import { ElMessage, progressProps } from 'element-plus';
+import { Folder } from '@element-plus/icons-vue';
 import { createApp, ref, reactive, onMounted, nextTick, computed, toRefs, defineProps, onUnmounted, watch, watchEffect } from 'vue'
 // import { type ParentTable, type ParentTables, type Tasks, type FollowRecords, type ChangeRecords } from "@/plan_types";
 // import { departListAllDeps, userListUsers } from '@/api/backstage';
@@ -493,9 +494,11 @@ const ref_parentTables: any = ref([])
 const ref_taskNodes: any = ref([])
 const ref_taskCircles: any = ref([])
 const ref_task_flow: any = ref([])
-// const props = withDefaults(defineProps<{
-//     projectType: string
-// }>(), {})
+const props = withDefaults(defineProps<{
+    projectType: string
+}>(), {
+    projectType: 'default'
+})
 
 const projectIDs: any = ref([])
 const projectProgress: any = ref([])

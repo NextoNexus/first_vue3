@@ -14,7 +14,7 @@
 
   <!-- <LifeCircle ref="lifecircle" v-if="showif"/> -->
   <!-- <button @click="showlifeciecle">点我查看sum</button> -->
-  <EducationSystemA/>
+  <EducationSystemA projectType="default"/>
 </template>
 
 <script lang="ts" setup name="App">
