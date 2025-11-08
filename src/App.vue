@@ -19,7 +19,10 @@
     <!-- <ProjectInfo/> -->
      <!-- <Progress/> -->
   <!-- <ProvideInjectFather/> -->
-   <addParticipantPanel/>
+   <!-- <addParticipantPanel/> -->
+  <div class="box">
+    lsdfjlasdjflsdjflsd
+  </div>
 </template>
 
 <script lang="ts" setup name="App">
@@ -69,4 +72,8 @@ let list = reactive([
 
 </script>
 
-<style></style>
+<style>
+.box{
+  font-family: MonoCraft;
+}
+</style>
