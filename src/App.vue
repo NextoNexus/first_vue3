@@ -21,7 +21,7 @@
   <!-- <ProvideInjectFather/> -->
    <!-- <addParticipantPanel/> -->
   <div class="box">
-    lsdfjlasdjflsdjflsd
+    hello world!!!!!
   </div>
 </template>
 
