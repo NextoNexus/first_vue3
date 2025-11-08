@@ -14,7 +14,12 @@
 
   <!-- <LifeCircle ref="lifecircle" v-if="showif"/> -->
   <!-- <button @click="showlifeciecle">点我查看sum</button> -->
-  <EducationSystemA projectType="default"/>
+  <!-- <EducationSystemA projectType="default"/> -->
+   <!-- <PlanSelf/> -->
+    <!-- <ProjectInfo/> -->
+     <!-- <Progress/> -->
+  <!-- <ProvideInjectFather/> -->
+   <addParticipantPanel/>
 </template>
 
 <script lang="ts" setup name="App">
@@ -23,6 +28,11 @@ import LabelRef from './component/LabelRef.vue';
 import Props from './component/Props.vue';
 import LifeCircle from './component/LifeCircle.vue';
 import EducationSystemA from "./component/EducationSystemA.vue";
+import PlanSelf from "./component/PlanSelf.vue";
+import Progress from "./component/Progress.vue";
+import ProjectInfo from "./component/ProjectInfo.vue";
+import ProvideInjectFather from './component/Provide-inject-father.vue';
+import addParticipantPanel from './component/addParticipantPanel.vue';
 
 import { reactive, ref } from 'vue';
 import { Cars } from './types';
